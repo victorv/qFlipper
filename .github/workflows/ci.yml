@@ -117,13 +117,13 @@ jobs:
           echo "REF=$(git rev-parse --abbrev-ref HEAD)" >> $GITHUB_ENV
           echo "SUFFIX=$(git rev-parse --abbrev-ref HEAD | sed 's/\//_/g')-$(date +'%d%m%Y')-$(git rev-parse --short HEAD)" >> $GITHUB_ENV
 
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: qFlipper-x86_64.AppImage
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: qFlipperSetup-64bit.exe
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: qflipper.dmg
 
